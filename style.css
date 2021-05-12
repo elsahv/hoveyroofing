@@ -1,0 +1,396 @@
+/*NAVIGATION*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 30px;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  padding: 35px 0;
+  transition: all 0.3s ease;
+  background: #1b1b1b;
+}
+
+.navbar.sticky {
+  background: #1b1b1b;
+  padding: 10px 0;
+}
+
+.navbar .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navbar .menu-list {
+  display: inline-flex;
+}
+
+.menu-list li {
+  list-style: none;
+}
+
+.menu-list li a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.menu-list li a:hover {
+  color: cyan;
+}
+
+.banner {
+  height: 65vh;
+  background: url(images/mainpic2.jpeg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.sublogo {
+  color: black;
+  font-size: 30px;
+  padding: 25px;
+  text-align: left;
+}
+
+.about {
+  padding: 40px 0;
+}
+
+.about .title {
+  font-size: 35px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.about p {
+  padding-top: 20px;
+  text-align: justify;
+  font-size: 20px;
+}
+
+.services {
+  margin: 25px;
+  text-align: center;
+  font-size: 35px;
+}
+
+.content {
+  border: solid 3px black;
+}
+
+.icon {
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+.icon.cancel-btn {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+}
+
+@media (max-width: 868px) {
+  .icon {
+    display: block;
+  }
+
+  .icon.hide {
+    display: none;
+  }
+
+  .navbar .menu-list {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    max-width: 400px;
+    background: #222;
+    display: block;
+    padding: 40px 0;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .navbar .menu-list.active {
+    left: 0%;
+  }
+
+  .navbar .menu-list li {
+    margin-top: 45px;
+  }
+
+  .navbar .menu-list li a {
+    font-size: 23px;
+  }
+}
+
+/*ABOUT*/
+/*SERVICES*/
+/*TESTIMONIALS*/
+/*PHOTO GALLERY*/
+.gallery-title {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.wrapper-gallery {
+  display: flex;
+  justify-content: center;
+  margin: 35px;
+}
+
+#index-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 5px;
+  grid-template-areas:
+    "img1 img2 img3 img4"
+    "img5 img6 img3 img7"
+    "img5 img9 img10 img11"
+    "img12 img8 img10 img11"
+    "img14 img8 img13 img11"
+  ;
+}
+
+#index-gallery .gallery-img {
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: cover;
+  cursor: pointer;
+}
+
+/*IMAGES*/
+#index-gallery .img1 {
+  grid-area: img1;
+  background-image: url(images/thumbs/hov1.jpeg);
+}
+
+#index-gallery .img2 {
+  grid-area: img2;
+  background-image: url(images/thumbs/hov2.jpeg);
+}
+
+#index-gallery .img3 {
+  grid-area: img3;
+  background-image: url(images/thumbs/hov3.jpeg);
+  height: 610px;
+}
+
+#index-gallery .img4 {
+  grid-area: img4;
+  background-image: url(images/thumbs/hov4.jpeg);
+}
+
+#index-gallery .img5 {
+  grid-area: img5;
+  background-image: url(images/thumbs/hov5.jpeg);
+  height: 610px;
+}
+
+#index-gallery .img6 {
+  grid-area: img6;
+  background-image: url(images/thumbs/hov6.jpeg);
+}
+
+#index-gallery .img7 {
+  grid-area: img7;
+  background-image: url(images/thumbs/hov7.jpeg);
+}
+
+#index-gallery .img8 {
+  grid-area: img8;
+  background-image: url(images/thumbs/hov8.jpeg);
+  height: 610px;
+}
+
+#index-gallery .img9 {
+  grid-area: img9;
+  background-image: url(images/thumbs/hov9.jpeg);
+}
+
+#index-gallery .img10 {
+  grid-area: img10;
+  background-image: url(images/thumbs/hov10.jpeg);
+  height: 610px;
+}
+
+#index-gallery .img11 {
+  grid-area: img11;
+  background-image: url(images/thumbs/hov11.jpeg);
+  height: 930px;
+}
+
+#index-gallery .img12 {
+  grid-area: img12;
+  background-image: url(images/thumbs/hov12.jpeg);
+}
+
+#index-gallery .img13 {
+  grid-area: img13;
+  background-image: url(images/thumbs/hov13.jpeg);
+}
+
+#index-gallery .img14 {
+  grid-area: img14;
+  background-image: url(images/thumbs/hov14.jpeg);
+}
+
+/*Gallery Images titles*/
+.gallery-img div {
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-img a {
+  font-family: arial, helvetica, sans-serif;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.gallery-img div:hover {
+  opacity: 0.8;
+  transition: all ease-in-out;
+}
+
+/*popup window when clicked for both spain/jt*/
+.img-window {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.img-window images {
+  max-height: 80vh;
+  max-width: 80vw;
+}
+
+.img-window img {
+  max-height: 80vh;
+  max-width: 80
+}
+
+/*NEXT IMAGE STYLING*/
+.img-btn-prev {
+  display: block;
+  padding: 6px 10px;
+  border-radius: 4px;
+  background-color: #111111;
+  position: fixed;
+  top: 48vh;
+  z-index: 500;
+  font-family: arial, helvetica, sans-serif;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.img-btn-prev:hover {
+  opacity: 0.8;
+}
+
+.img-btn-next {
+  display: block;
+  padding: 6px 10px;
+  border-radius: 4px;
+  background-color: #111111;
+  position: fixed;
+  top: 48vh;
+  z-index: 500;
+  font-family: arial, helvetica, sans-serif;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.img-btn-next:hover {
+  opacity: 0.8;
+}
+
+@media (max-width:768px) {
+  #index-gallery {
+    display: grid;
+    grid-gap: 1em;
+    grid-template: auto/ repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 10px;
+    grid-template-areas:
+      "img1"
+      "img2"
+      "img3"
+      "img4"
+      "img5"
+      "img6"
+      "img7"
+      "img8"
+      "img9"
+      "img10"
+      "img11"
+      "img12"
+      "img13"
+      "img14"
+  }
+
+  #index-gallery .gallery-img {
+    width: 100%;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: cover;
+    cursor: pointer;
+  }
+}
+
+/*CONTACT*/
+.contact {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  font-size: 35px;
+  font-weight: 700;
+}
