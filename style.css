@@ -3,12 +3,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
 }
-
 
 .content {
   max-width: 1250px;
@@ -20,7 +20,7 @@ html {
   position: fixed;
   z-index: 5;
   width: 100%;
-  padding: 35px 0;
+  padding: 30px 0;
   transition: all 0.3s ease;
   background: #1b1b1b;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
@@ -39,7 +39,7 @@ html {
 
 .navbar .logo a {
   color: #fff;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 600;
   text-decoration: none;
 }
@@ -54,7 +54,7 @@ html {
 
 .menu-list li a {
   color: #fff;
-  font-size: 18px;
+  font-size: 23px;
   font-weight: 500;
   margin-left: 25px;
   text-decoration: none;
@@ -62,7 +62,7 @@ html {
 }
 
 .menu-list li a:hover {
-  color: cyan;
+  text-decoration: underline;
 }
 
 .banner {
@@ -75,35 +75,42 @@ html {
 }
 
 .sublogo {
-  color:  #1b1b1b;
+  color: #1b1b1b;
   font-size: 40px;
   text-align: center;
 }
 
-.sublogo h2{
-    padding: 20px;
+.sublogo h2 {
+  padding: 45px;
+  font-size: 45px;
 }
 
 .about {
-  padding: 40px 0;
+  padding: 10px;
 }
 
 .about .title {
-  font-size: 35px;
+  font-size: 40px;
   font-weight: 700;
   text-align: center;
+  padding: 10px;
 }
 
 .about p {
-  padding-top: 20px;
+  padding: 20px;
   text-align: justify;
-  font-size: 20px;
+  font-size: 30px;
 }
 
+/*SERVICES*/
 .services {
   margin: 25px;
   text-align: center;
-  font-size: 35px;
+  font-size: 40px;
+}
+
+.services h2 {
+  text-shadow: 2px 2px 4px #908a8a;
 }
 
 .content {
@@ -123,61 +130,23 @@ html {
   top: 20px;
 }
 
-/*NAVIGATION MOBILE*/
-
-@media (max-width: 868px) {
-  .icon {
-    display: block;
-  }
-
-  .icon.hide {
-    display: none;
-  }
-
-  .navbar .menu-list {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    height: 100vh;
-    width: 100%;
-    max-width: 400px;
-    background: #222;
-    display: block;
-    padding: 40px 0;
-    text-align: center;
-    transition: all 0.3s ease;
-  }
-
-  .navbar .menu-list.active {
-    left: 0%;
-  }
-
-  .navbar .menu-list li {
-    margin-top: 45px;
-  }
-
-  .navbar .menu-list li a {
-    font-size: 23px;
-  }
-}
-
 .sublogo {
-  color:  #1b1b1b;
+  color: #1b1b1b;
   font-size: 25px;
   padding: 5px;
   text-align: center;
+  text-shadow: 2px 2px 4px #908a8a;
 }
 
-/*ABOUT*/
-/*SERVICES*/
-/*TESTIMONIALS*/
 /*PHOTO GALLERY*/
 .gallery-title {
   display: flex;
   justify-content: center;
-  padding: 10px 0;
+  padding-top: 10px;
   font-size: 35px;
   font-weight: 700;
+  border-bottom: solid 2px black;
+  text-shadow: 2px 2px 2px #908a8a;
 }
 
 .wrapper-gallery {
@@ -207,7 +176,7 @@ html {
   background-size: cover;
   background-position: cover;
   cursor: pointer;
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
 }
 
 /*IMAGES*/
@@ -373,7 +342,76 @@ html {
   opacity: 0.8;
 }
 
-@media (max-width:768px) {
+/*CONTACT*/
+.contact {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.contact h2 {
+  font-size: 55px;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 3px black;
+  text-shadow: 2px 2px 4px #908a8a;
+}
+
+.contact ul {
+  list-style: none;
+  border: solid 3px black;
+  padding: 25px;
+}
+
+/*MOBILE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+/*NAVIGATION MOBILE*/
+@media (max-width: 868px) {
+  .icon {
+    display: block;
+  }
+
+  .icon.hide {
+    display: none;
+  }
+
+  .content .logo a {
+    font-size: 25px;
+  }
+
+  .navbar .menu-list {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    max-width: 400px;
+    background: #222;
+    display: block;
+    padding: 40px 0;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .navbar .menu-list.active {
+    left: 0%;
+  }
+
+  .navbar .menu-list li {
+    margin-top: 45px;
+  }
+
+  .navbar .menu-list li a {
+    font-size: 23px;
+  }
+
+  .services ul li {
+    font-size: 35px;
+  }
+
   #index-gallery {
     display: grid;
     grid-gap: 1em;
@@ -404,13 +442,53 @@ html {
     background-position: cover;
     cursor: pointer;
   }
+
+  .contact {
+    font-size: 25px;
+    margin: 25px;
+  }
 }
 
-/*CONTACT*/
-.contact {
-  display: flex;
-  justify-content: center;
-  padding: 10px 0;
-  font-size: 35px;
-  font-weight: 700;
+@media (max-width: 500px) {
+  .sublogo h2 {
+    font-size: 30px;
+    padding: 1px;
+    margin: 5px;
+  }
+
+  .about .content p {
+    font-size: 22px;
+  }
+
+  .services ul li {
+    font-size: 22px;
+    padding: 10px;
+  }
+
+  .gallery-title h2 {
+    text-align: center;
+  }
+
+  .contact {
+    display: grid;
+    grid-auto-rows: repeat(4 1fr);
+    grid-gap: 1em;
+  }
+
+  .contact h2 {
+    font-size: 45px;
+    border: none;
+  }
+
+  .contact ul {
+    border: none;
+    padding: 15px;
+  }
+
+  .contact ul li {
+    border: none;
+    font-size: 21px;
+    display: flex;
+    justify-content: center;
+  }
 }

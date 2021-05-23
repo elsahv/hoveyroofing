@@ -1,4 +1,4 @@
-//NAVIGATION
+//NAVIGATION, MOBILE DISPLAY
 const body = document.querySelector("body");
 const navbar = document.querySelector(".navbar");
 const menu = document.querySelector(".menu-list");
@@ -9,7 +9,7 @@ menuBtn.onclick = () => {
   menuBtn.classList.add("hide");
   menuBtn.classList.add("hide");
 }
-cancelBtn.onclick = () => {
+cancelBtn.onclick = () =>{
   menu.classList.remove("active");
   menuBtn.classList.remove("hide");
 }
@@ -18,6 +18,7 @@ window.onscroll = () => {
   this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
 }
 
+//END NAVIGATION, MOBILE DISPLAY
 
 
 
@@ -80,3 +81,4 @@ if (galleryImages) {
 function closeImg() {
   document.querySelector(".img-window").remove();
 }
+//END PHOTO GALLERY
